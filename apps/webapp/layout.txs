@@ -1,0 +1,33 @@
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'FoodOrder - Multi-Tenant Food Ordering Platform',
+  description: 'Order food from your favorite restaurants',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <header className="bg-orange-600 text-white p-4">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-2xl font-bold">🍔 FoodOrder</h1>
+          </div>
+        </header>
+        <main className="max-w-7xl mx-auto">
+          {children}
+        </main>
+        <footer className="bg-gray-800 text-white p-4 mt-12">
+          <div className="max-w-7xl mx-auto text-center">
+            <p>&copy; 2025 FoodOrder. All rights reserved.</p>
+          </div>
+        </footer>
+      </body>
+    </html>
+  )
+}
